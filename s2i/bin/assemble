@@ -13,5 +13,9 @@ else
   mvn clean install $MVN_ARGS
 fi
 
+echo "---> Moving JAR artifacts to application root"
+mv ./target/*.jar ./
+rm -Rf ./src ./target ./.git ./.mvn ./.m2 ./gradle* ./pom*.xml ./mvnw* ./build.gradle
+
 # Fix source directory permissions
 fix-permissions ./
