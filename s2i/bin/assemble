@@ -14,8 +14,10 @@ else
 fi
 
 echo "---> Moving JAR artifacts to application root"
+rm -Rf /tmp/src
 mv ./target/*.jar ./
-rm -Rf ./src ./target ./.git ./.mvn ./.m2 ./gradle* ./pom*.xml ./mvnw* ./build.gradle
+rm -Rf ./src ./target ./.git ./.mvn ./.m2 ./gradle* ./pom*.xml ./mvnw* ./build.gradle 
+find . -iname "readme" -exec rm {} \;
 
 # Fix source directory permissions
 fix-permissions ./
