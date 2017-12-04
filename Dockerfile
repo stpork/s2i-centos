@@ -1,8 +1,3 @@
-# springboot-maven3-centos
-#
-# This image provide a base for running Spring Boot based applications. It
-# provides a base Java 8 installation and Maven 3.
-
 FROM openshift/base-centos7
 
 EXPOSE 8080
@@ -27,7 +22,7 @@ RUN set -x \
 && TOOL_INSTALL=/usr/local/bin \
 && OCP_VERSION=v3.6.1 \
 && OCP_BUILD=008f2d5 \
-&& CLI_VERSION=7.2.0 \
+&& CLI_VERSION=7.3.0 \
 && CLI_BUILD=16285777 \
 && OC_URL=http://github.com/openshift/origin/releases/download/${OCP_VERSION}/openshift-origin-client-tools-${OCP_VERSION}-${OCP_BUILD}-linux-64bit.tar.gz \
 && CLI_URL=http://bobswift.atlassian.net/wiki/download/attachments/${CLI_BUILD}/atlassian-cli-${CLI_VERSION}-distribution.zip \
